@@ -1,0 +1,11 @@
+services:
+  backend:
+    container_name: backend
+    restart: always
+    env_file: .env
+    build: .
+    ports:
+      - 8002:8002
+    volumes:
+      - .:/app
+    tty: true
